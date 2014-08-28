@@ -9,9 +9,9 @@ function NebuJS_initAudioEmoSlider(ImageFolderPath, divIdent, targetTextField, m
 	PauseCaption = (PauseCaption)? PauseCaption : "Pause";
 
 
-
-		var thePlayer = '<div id="jquery_jplayer_1" class="jp-jplayer"></div><div id="jp_container_1" class="jp-audio">  				 		  <div class="jp-type-single">         <p class="desc">rmf fm morning program users test</p><p class="help"><a href="http://www.nebu.com" target="_blank">www.nebu.com</a></p><div class="qm"></div>           <div class="jp-gui jp-interface">       <ul class="jp-controls">          <li><a href="javascript:;" class="jp-play" tabindex="1" onclick="NebuJS_ClickedPlay();">play</a></li>          <li><a href="javascript:;" class="jp-pause" tabindex="1" onclick="NebuJS_ClickedPause();">pause</a></li>          <li><a href="javascript:;" class="jp-stop" tabindex="1" onclick="NebuJS_ClickedStop();">stop</a></li>          <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>          <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>          <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>        </ul>            <div class="jp-progress">                      <div class="jp-play-bar"></div>                  </div>         	   <div class="jp-volume-bar">          <div class="jp-volume-bar-value"></div>        </div>	<div class="jp-time-holder">   <div class="jp-current-time"></div>     <div class="jp-duration"></div>        </div>     </div>      <div class="jp-no-solution">        <span>Update Required</span>        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.      </div>    </div>  </div>';
 	var theSlider ='<div id="'+divIdent+'_slider" style="width:400px;margin:10px;"></div>';
+	var thePlayer = '<div id="jquery_jplayer_1" class="jp-jplayer"></div><div id="jp_container_1" class="jp-audio">  				 		  <div class="jp-type-single">         <p class="desc">rmf fm morning program users test</p><p class="help"><a href="http://www.nebu.com" target="_blank">www.nebu.com</a></p><div class="qm"></div>           <div class="jp-gui jp-interface">       <ul class="jp-controls">          <li><a href="javascript:;" class="jp-play" tabindex="1" onclick="NebuJS_ClickedPlay();">play</a></li>          <li><a href="javascript:;" class="jp-pause" tabindex="1" onclick="NebuJS_ClickedPause();">pause</a></li>          <li><a href="javascript:;" class="jp-stop" tabindex="1" onclick="NebuJS_ClickedStop();">stop</a></li>          <li><a href="javascript:;" class="jp-mute" tabindex="1" title="mute">mute</a></li>          <li><a href="javascript:;" class="jp-unmute" tabindex="1" title="unmute">unmute</a></li>          <li><a href="javascript:;" class="jp-volume-max" tabindex="1" title="max volume">max volume</a></li>        </ul>            <div class="jp-progress">                      <div class="jp-play-bar"></div>                  </div>         	   <div class="jp-volume-bar">          <div class="jp-volume-bar-value"></div>        </div>	<div class="jp-time-holder">   <div class="jp-current-time"></div>     <div class="jp-duration"></div>        </div>     </div> <div class="slider-container"><div id="'+divIdent+'_slider" style="width:400px;margin:15px;"><div class="reminder"></div></div><p class="rate-desc-left">Uninteresting</p><p class="rate-desc-right">Interesting</p></div>    <div class="jp-no-solution">        <span>Update Required</span>        To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.      </div>    </div>  </div>';
+	
 
 	$("#"+divIdent).append(thePlayer+theSlider);
 
@@ -28,7 +28,7 @@ function NebuJS_initAudioEmoSlider(ImageFolderPath, divIdent, targetTextField, m
 	});
 
 
-	$("#"+divIdent+"_slider").slider({disabled:true});
+	$("#"+divIdent+"_slider").slider({disabled:false});
 
 	doRecord = function (){
 
@@ -153,10 +153,24 @@ function prohibitNext(){
 
 if (document.forms[0][QuestionName].value.split(",")[document.forms[0][QuestionName].value.split(",").length-1] != "End"){
 
-$("#btnNext").hide();
+	$("#btnNext").hide();
 
 }
 else
-$("#btnNext").show();
+	$("#btnNext").show();
+};
 
-}
+$(document).ready(function(){
+	console.log($('.reminder'));
+	$('#MyRadioEmoSlider_slider').click(function(){
+		alert('asdf');
+		$('.reminder').addClass('hidden');
+	});
+});
+
+
+
+
+// setTimeout(function() {
+//       var selection = $( ".selector" ).slider( "value" );
+// }, 3000);
