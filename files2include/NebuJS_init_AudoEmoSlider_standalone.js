@@ -1,7 +1,7 @@
 
 function NebuJS_initAudioEmoSlider(ImageFolderPath, divIdent, targetTextField, mp3file, oggfile, m4afile, RecordInterval, allowPause, PlayCaption, PauseCaption ){
 
-	
+	window.timeout;
 
 	RecordInterval = (RecordInterval) ? (RecordInterval) : 250;
 	allowPause = (allowPause) ? true: false;
