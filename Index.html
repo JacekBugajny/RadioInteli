@@ -14,12 +14,12 @@
 		</style>
 		<script type="text/javascript">
 			var QuestionName ='Q1'; var RecordInterval = 1000; var Running = false;
-			var Ended = true;
+			var Ended = false;
 			       $(document).ready(function(){
 			NebuJS_initAudioEmoSlider("files2include/", "MyRadioEmoSlider",QuestionName, "http://radiointelligence.dubinterviewer.com/Images/1111/test.mp3", "http://radiointelligence.dubinterviewer.com/Images/1111/test.ogg", "http://radiointelligence.dubinterviewer.com/Images/1111/test.m4a", RecordInterval);
-			       // document.forms[0][QuestionName].style.display = "none";
-			       // myDrawFunction();
-			       // prohibitNext();
+			       document.forms[0][QuestionName].style.display = "none";
+			       myDrawFunction();
+			       prohibitNext();
 			       });
 		</script>
 	</body>

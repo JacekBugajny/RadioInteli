@@ -83,6 +83,7 @@ function NebuJS_initAudioEmoSlider(ImageFolderPath, divIdent, targetTextField, m
 	NebuJS_ClickedPlay =function(){
 		if (Ended) document.forms[0][targetTextField].value="";
 		$("#"+divIdent+"_slider").slider({disabled:false});
+		console.log("replay")
 		Running = true;
 		Ended= false;
 	};
@@ -129,7 +130,7 @@ mp3: mp3file,
 
 
 
-//Graph code:
+// Graph code:
 
 // function myDrawFunction()
 // {
