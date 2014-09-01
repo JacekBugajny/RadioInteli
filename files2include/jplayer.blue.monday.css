@@ -174,7 +174,7 @@ a.jp-play {
 	background: url("jplayer.blue.monday.png") 0 0 no-repeat;
 }
 a.jp-play:hover {
-	background: url("jplayer.blue.monday.png") -50 0px no-repeat;
+	background: url("jplayer.blue.monday.png") -50px 0 no-repeat;
 }
 a.jp-pause {
 	background: url("jplayer.blue.monday.png") -100 0px no-repeat;
