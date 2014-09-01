@@ -694,6 +694,15 @@ div.reminder-reversed{
 	background:url("jplayer.blue.monday.png") -112px -140px;
 	margin-top: -.28em; margin-left: .6em;
 }
+p.reminder-desc {
+	display:inline;
+	line-height: 2em;
+	font-family: Trebuchet, sans-serif;
+	font-size: 0.5em;
+	text-transform: uppercase;
+	color:white;
+	margin-left: 12px;
+}
 :focus{
     outline: 0;
 }
