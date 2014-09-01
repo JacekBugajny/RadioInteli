@@ -49,7 +49,6 @@ function NebuJS_initAudioEmoSlider(ImageFolderPath, divIdent, targetTextField, m
 	      			$('.reminder-reversed').show();
 	      			
 	      		}
-	      		console.log('timeout');
 	      		
 			}, 5000);
 
