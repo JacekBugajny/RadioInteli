@@ -1,0 +1,26 @@
+<html>
+	<head>
+		<link type="text/css" href="files2include/jplayer.blue.monday.css" rel="stylesheet" > <script src="files2include/jquery-1.8.1.min.js"></script>
+		<link href="files2include/jquery-ui.css" rel="stylesheet" type="text/css"/>
+		<script src="files2include/jquery-ui.min.js"></script>
+		<script type="text/javascript" src="files2include/wz_jsgraphics.js"></script> <script type="text/javascript" src="files2include/jquery.jplayer.min.js"></script> <script src="files2include/jquery.ui.touch-	punch.min.js"></script>
+		<script src="files2include/NebuJS_init_AudoEmoSlider_standalone.js"></script>
+	</head>
+	<body>
+		<div id="MyRadioEmoSlider"></div>
+		<style type="text/css">
+			a.ui-slider-handle {font-size:12px; text-decoration:none; padding:3px; text-align:center;}
+			#jp_container_1 {border:1px solid #d2d2d2;}
+		</style>
+		<script type="text/javascript">
+			var QuestionName ='Q1'; var RecordInterval = 1000; var Running = false;
+			var Ended = true;
+			       $(document).ready(function(){
+			NebuJS_initAudioEmoSlider("files2include/", "MyRadioEmoSlider",QuestionName, "http://radiointelligence.dubinterviewer.com/Images/1111/test.mp3", "http://radiointelligence.dubinterviewer.com/Images/1111/test.ogg", "http://radiointelligence.dubinterviewer.com/Images/1111/test.m4a", RecordInterval);
+			       // document.forms[0][QuestionName].style.display = "none";
+			       // myDrawFunction();
+			       // prohibitNext();
+			       });
+		</script>
+	</body>
+</html>
